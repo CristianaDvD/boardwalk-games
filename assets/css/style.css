@@ -65,6 +65,18 @@ h2 {
     color: white;
 }
 
+/* events section */
+
+.sharp-corners,
+.sharp-corners * {
+    border-radius: 0;
+}
+.discount {
+    display: flex;
+justify-content: center;
+align-items: center;
+
+}
 /* Navbar */
 
 #navbar {
