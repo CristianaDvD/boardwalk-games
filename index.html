@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="index.html#services">Services</a>
           <a class="nav-link" href="index.html#events">Events</a>
           <a class="nav-link" href="game-library.html">Games</a>
           <a class="nav-link" href="index.html#contact">Contact</a>
@@ -314,6 +314,29 @@
 
   <!--Font awesome kit-->
   <script src="https://kit.fontawesome.com/4804c64e3a.js" crossorigin="anonymous"></script>
+
+<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+<script>
+  document
+      .querySelectorAll(".navbar-collapse .nav-link")
+      .forEach((link) => {
+          link.addEventListener("click", function (e) {
+              let section = document.querySelector(e.target.getAttribute("href"));
+              if (section) {
+                  e.preventDefault(); // Prevent default anchor click behavior
+                  let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                  window.scroll({
+                      top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                      behavior: "smooth",
+                  });
+                  document
+                      .querySelector(".navbar-collapse")
+                      .classList.remove("show"); // Collapse navbar
+              }
+          });
+      });
+</script>
+
 </body>
 
 </html>
