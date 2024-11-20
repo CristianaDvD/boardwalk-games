@@ -77,6 +77,13 @@ justify-content: center;
 align-items: center;
 
 }
+
+/* reservation section*/
+.end {
+display: flex;
+justify-content: flex-end;
+}
+
 /* Navbar */
 
 #navbar {
@@ -163,6 +170,10 @@ align-items: center;
     #services .card-body {
         min-height: 191px;
     }
+    .discount {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
 }
 
 /* Large devices (small laptops, 992px and up) */
@@ -170,6 +181,10 @@ align-items: center;
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: auto;
+    }
+    .discount {
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
 
