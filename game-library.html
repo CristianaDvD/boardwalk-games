@@ -26,7 +26,7 @@
 
 <body class="d-flex flex-column min-vh-100">
   <!--Navigation-->
-  <nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <nav id="navbar" class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo-sm-white.png" alt="Boardwalk Games logo" class="logo">
@@ -229,7 +229,7 @@
       </div>
     </section>
     <!--reserve section -->
-    <section class="container section">
+    <section id="reserve-game-form" class="container section mb-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
           <h2 class="display-6 text-center">Reserve a game</h2>
@@ -253,6 +253,8 @@
       <div class="col-lg-8">
         <label for="game" class="form-label">Select Game</label>
         <select id="game" class="form-select" name="game" required>
+           <!-- value="" makes this option a placeholder and won't be accepted as a valid selection, 
+                                                ensuring the required attribute on the <select> element works -->
           <option value="" selected>Select Game</option>
           <option value="pioneers">Galaxy Pioneers</option>
           <option value="Mystic-Woods">Mystic Woods</option>
@@ -269,7 +271,7 @@
         <input type="date" class="form-control" id="date" name="date" required>
       </div>
       </div>
-      <div class="col-md-8 mt-4 end">
+      <div class="col-md-8 mt-4 mb-4 end">
         <button type="submit" class="btn custom-button-outline">Submit</button>
       </div>
     </form>
